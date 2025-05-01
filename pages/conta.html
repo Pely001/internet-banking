@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco do Desenvolvedor - Conta</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script>
+        // Recupera o nome do usuário e o saldo do Local Storage
+        document.addEventListener("DOMContentLoaded", function () {
+            const usuarioLogado = localStorage.getItem("usuarioLogado");
+            const saldo = localStorage.getItem(`saldo_${usuarioLogado}`);
+
+            if (usuarioLogado) {
+                document.getElementById("bem-vindo").textContent = `Bem-vindo, ${usuarioLogado}`;
+                if (saldo) {
+                    document.getElementById("saldo").textContent = `Saldo: R$ ${parseFloat(saldo).toFixed(2)}`;
+                } else {
+                    document.getElementById("saldo").textContent = "Saldo: R$ 0.00";
+                }
+            } else {
+                // Redireciona para a página de login se não houver usuário logado
+                window.location.href = "index.html";
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="title">Banco Digital do Desenvolvedor</div>
+    <div class="container">
+        <h1 id="bem-vindo">Bem-vindo, </h1>
+        <p>Aqui estão suas informações da conta.</p>
+        <div class="saldo" id="saldo">Saldo: </div>
+        <div>
+            <button class="saque">Saque</button>
+            <button class="deposito">Depósito</button>
+            <button class="emprestimo">Empréstimo</button>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2025 Banco Digital do Desenvolvedor. Todos os direitos reservados.</p>
+        <p>Desenvolvido por <a href="https://github.com/Pely001" target="_blank" style="color: inherit; text-decoration: underline;">>_PedroMatias</a></p>
+    </div>
+</body>
+</html>

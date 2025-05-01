@@ -1,0 +1,77 @@
+.body {
+    margin: 0;
+    padding: 0;
+}
+.title{
+    font-size: 24px;
+    font-weight: bold;
+    color: #f8f8f8;
+    background-color: rgb(23, 42, 129);
+    padding: 10px;
+    text-align: center;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.form-container{
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.button{
+    background-color: rgb(23, 42, 129);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.footer{
+    background-color: rgb(23, 42, 129);
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+   
+}
+.card{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.saldo{
+    background-color: #88a5bd;
+    width: 200px;
+    height: 80px;
+    border-radius: 0.1;
+    padding: 10px;
+    font-size: large;
+    
+}
+.saque{
+   padding: 5px;
+   height: auto;
+   width: auto;
+    
+}
+.deposito{
+    padding: 5px;
+    height: auto;
+    width: auto;
+      
+}
+.emprestimo{
+    padding: 5px;
+    height: auto;
+   width: auto;
+    
+}	
