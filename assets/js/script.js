@@ -1,14 +1,16 @@
 function entrar() {
-    var usuario = document.getElementById("usuario").value;
-    var senha = document.getElementById("senha").value;
+    var usuario = document.getElementById("usuario").value.trim().toLowerCase(); // Remove espaços e converte para minúsculas
+    var senha = document.getElementById("senha").value.trim(); // Remove espaços
+
     var usuarios = [
-        { usuario: "Pedro", senha: "123456" },
+        { usuario: "Pedro", senha: "29061994" },
         { usuario: "Michael", senha: "888888" },
         { usuario: "Roblox", senha: "faderoblox" }
     ];
 
     var usuarioValido = usuarios.find(function(u) {
-        return u.usuario === usuario && u.senha === senha;
+        // Converte o nome de usuário para minúsculas e compara
+        return u.usuario.toLowerCase() === usuario && u.senha === senha;
     });
 
     if (usuarioValido) {
